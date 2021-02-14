@@ -16,3 +16,12 @@
 - myParentElement.append(myChildElement) - Adds the element at the very end.
 - myParentElement.before(myChildElement) - Adds the element as a sibling.
 - myParentElement.after(myChildElement) - Adds the element as a sibling.
+- element.getAttribute()
+- element.setAttribute()
+- element.classList.add('custom-class');
+- element.classList.remove('custom-class');
+- element.classList.toggle('custom-class');
+- element.classList.contains('custom-class);
+- element.src returns the absolute url
+- element.getAttribute('src') returns the relative url
+- element.dataset.versionNumber()

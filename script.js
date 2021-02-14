@@ -68,13 +68,49 @@ message.style.borderTopRightRadius = '10px';
 message.style.fontSize = '20px';
 
 /* getting styles */
-console.log(message.style.color); /* by this method, you can only get the styles which are set by JS */
-console.log(message.style.backgroundColor);
+/* by this method, you can only get the styles which are set by JS */
+// console.log(message.style.color); 
+// console.log(message.style.backgroundColor);
 
-console.log('getComputedStyle(message).color:', getComputedStyle(message).color);
-console.log('getComputedStyle(message).height:', getComputedStyle(message).height);
+// console.log('getComputedStyle(message).color:', getComputedStyle(message).color);
+// console.log('getComputedStyle(message).height:', getComputedStyle(message).height);
 
 message.style.height = Number.parseInt(getComputedStyle(message).height) + 40 + 'px';
 
 /* setting the root css propertie's */
-document.documentElement.style.setProperty('--color-primary', 'bisque');
+// document.documentElement.style.setProperty('--color-primary', 'bisque');
+
+/* Attributes */
+// const logo = document.querySelector('.nav__logo');
+// console.log(logo.alt);
+// console.log(logo.src);
+// console.log(logo.className);
+
+// logo.alt = 'Beautifull minimalistic logo';
+
+/* Non Standard */
+// console.log('logo.designer', logo.designer);
+// console.log('logo.getAttribute(\'designer\')', logo.getAttribute('designer'));
+// logo.setAttribute('company', 'Bankist');
+
+/* one returns absolute url and one returns relative url */
+// console.log(logo.src);
+// console.log(logo.getAttribute('src'));
+
+// const link = document.querySelector('.twitter-link');
+// console.log(link.href);
+// console.log(link.getAttribute('href'));
+
+/* data attribute */
+// console.log(logo.dataset.versionNumber);
+// logo.dataset.versionNumber = '4.0';
+// console.log(logo.dataset.versionNumber);
+
+/* Classes */
+// logo.classList.add('c', 'j');
+// logo.classList.remove('c', 'j');
+// logo.classList.toggle('c');
+// logo.classList.contains('c');
+
+/* Don't Use */
+// logo.className = 'custom-class';
