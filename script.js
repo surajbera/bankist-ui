@@ -8,16 +8,18 @@ const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
 
 const openModal = function (e) {
+  e.preventDefault();
   e.stopPropagation();
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
-  body.classList.add('modal-active');
+  // body.classList.add('modal-active');
 };
 
 const closeModal = function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
-  body.classList.remove('modal-active');
+  // body.classList.remove('modal-active');
+  /* commented because the page scrolls up, since body element's position is set to fixed */
 };
 
 btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
@@ -31,7 +33,7 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-/* Working with the DOM API */
+/******** Working with the DOM API ********/
 
 // console.log(document.documentElement);
 // console.log(document.head);
@@ -53,3 +55,26 @@ document.querySelector('.btn--close-cookie').addEventListener('click', function(
   message.remove();
   // message.parentElement.removeChild(message);
 })
+
+/******** Adding styles using JS ********/
+
+/* adding styles */
+message.style.backgroundColor = '#000';
+message.style.width = '80%';
+message.style.left = '50%';
+message.style.transform = 'translate(-50%)';
+message.style.borderTopLeftRadius = '10px';
+message.style.borderTopRightRadius = '10px';
+message.style.fontSize = '20px';
+
+/* getting styles */
+console.log(message.style.color); /* by this method, you can only get the styles which are set by JS */
+console.log(message.style.backgroundColor);
+
+console.log('getComputedStyle(message).color:', getComputedStyle(message).color);
+console.log('getComputedStyle(message).height:', getComputedStyle(message).height);
+
+message.style.height = Number.parseInt(getComputedStyle(message).height) + 40 + 'px';
+
+/* setting the root css propertie's */
+document.documentElement.style.setProperty('--color-primary', 'bisque');
