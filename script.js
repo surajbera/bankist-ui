@@ -30,3 +30,26 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+/* Working with the DOM API */
+
+// console.log(document.documentElement);
+// console.log(document.head);
+// console.log(document.body);
+
+const header = document.querySelector('.header');
+const message = document.createElement('div');
+message.classList.add('cookie-message');
+// message.textContent = 'We use cookies for improved funtionality and analytics';
+message.innerHTML = 'We use cookies for improved funtionality and analytics. <button class="btn btn--close-cookie">Got It!</button>'
+// header.prepend(message);
+// header.prepend(message.cloneNode(true));
+header.append(message);
+
+// header.before(message.cloneNode(true));
+// header.after(message.cloneNode(true));
+
+document.querySelector('.btn--close-cookie').addEventListener('click', function() {
+  message.remove();
+  // message.parentElement.removeChild(message);
+})
