@@ -127,5 +127,11 @@ buttonScrollTo.addEventListener('click', function(e) {
   // console.log(document.documentElement.clientWidth, document.documentElement.clientHeight);
 
   /* scrolling */
-  window.scrollTo(s1Coords.left + window.pageXOffset, s1Coords.top + window.pageYOffset);
+  // window.scrollTo(s1Coords.left + window.pageXOffset, s1Coords.top + window.pageYOffset);
+
+  window.scrollTo({
+    left: s1Coords.left + window.pageXOffset,
+    top: s1Coords.top + window.pageYOffset,
+    behavior: 'smooth'
+  })
 })
