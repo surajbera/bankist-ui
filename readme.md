@@ -25,6 +25,10 @@
 - element.src returns the absolute url
 - element.getAttribute('src') returns the relative url
 - element.dataset.versionNumber()
+- getBoundingClientRect(): Relative to the viewport
+- window.pageYOffset - Relative to the document
+- window.pageXOffset - Relative to the document
+- Getting the Viewport width and height: document.documentElement.clientWidth and document.documentElement.clientHeight
 
 ## Features Implemented
 - Modal Window
