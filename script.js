@@ -12,6 +12,7 @@ const openModal = function (e) {
   e.stopPropagation();
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
+  /* commented because the page scrolls up on fixed positioning to body */
   // body.classList.add('modal-active');
 };
 
@@ -19,7 +20,6 @@ const closeModal = function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
   // body.classList.remove('modal-active');
-  /* commented because the page scrolls up, since body element's position is set to fixed */
 };
 
 btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
