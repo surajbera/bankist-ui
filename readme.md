@@ -25,3 +25,7 @@
 - element.src returns the absolute url
 - element.getAttribute('src') returns the relative url
 - element.dataset.versionNumber()
+
+## Features Implemented
+- Modal Window
+- Cookie Policy Popup
