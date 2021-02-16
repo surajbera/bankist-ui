@@ -140,21 +140,21 @@ buttonScrollTo.addEventListener('click', function (e) {
 
 /******** Event Propagation ********/
 
-const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
-const randomColor = () => `rgb(${randomInt(0, 255)}, ${randomInt(0, 255)}, ${randomInt(0, 255)})`;
+// const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+// const randomColor = () => `rgb(${randomInt(0, 255)}, ${randomInt(0, 255)}, ${randomInt(0, 255)})`;
 
 /* anchor element */
-document.querySelector('.nav__link').addEventListener('click', function (e) {
-  console.log(e.target);
-  this.style.backgroundColor = randomColor();
-})
+// document.querySelector('.nav__link').addEventListener('click', function (e) {
+//   console.log(e.target);
+//   this.style.backgroundColor = randomColor();
+// })
 /* ul element */
-document.querySelector('.nav__links').addEventListener('click', function (e) {
-  console.log(e.currentTarget);
-  this.style.backgroundColor = randomColor();
-})
+// document.querySelector('.nav__links').addEventListener('click', function (e) {
+//   console.log(e.currentTarget);
+//   this.style.backgroundColor = randomColor();
+// })
 /* nav element */
-document.querySelector('.nav').addEventListener('click', function (e) {
-  console.log(e.target);
-  this.style.backgroundColor = randomColor();
-})
+// document.querySelector('.nav').addEventListener('click', function (e) {
+//   console.log(e.target);
+//   this.style.backgroundColor = randomColor();
+// })
