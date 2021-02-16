@@ -51,7 +51,7 @@ header.append(message);
 // header.before(message.cloneNode(true));
 // header.after(message.cloneNode(true));
 
-document.querySelector('.btn--close-cookie').addEventListener('click', function() {
+document.querySelector('.btn--close-cookie').addEventListener('click', function () {
   message.remove();
   // message.parentElement.removeChild(message);
 })
@@ -120,7 +120,7 @@ message.style.height = Number.parseInt(getComputedStyle(message).height) + 40 + 
 const buttonScrollTo = document.querySelector('.btn--scroll-to');
 const section1 = document.querySelector('#section--1');
 
-buttonScrollTo.addEventListener('click', function(e) {
+buttonScrollTo.addEventListener('click', function (e) {
   const s1Coords = section1.getBoundingClientRect();
   // console.log(s1Coords);
   // console.log(e.target.getBoundingClientRect());
@@ -129,9 +129,11 @@ buttonScrollTo.addEventListener('click', function(e) {
   /* scrolling */
   // window.scrollTo(s1Coords.left + window.pageXOffset, s1Coords.top + window.pageYOffset);
 
-  window.scrollTo({
-    left: s1Coords.left + window.pageXOffset,
-    top: s1Coords.top + window.pageYOffset,
-    behavior: 'smooth'
-  })
+  // window.scrollTo({
+  //   left: s1Coords.left + window.pageXOffset,
+  //   top: s1Coords.top + window.pageYOffset,
+  //   behavior: 'smooth'
+  // })
+
+  section1.scrollIntoView({ behavior: 'smooth' })
 })
