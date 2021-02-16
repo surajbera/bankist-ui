@@ -37,3 +37,5 @@
 
 ## Notes
 - One advantage of using addEventListener() is that you can add removeEventListener(). 
+- e.currentTarget returns the element which has the 'Event Listener' attached to. **e.currentTarget** also equals to the **this** keyword.
+- Bydefault, 'Event Capture' is set to false and 'Event Bubbling' is set to true. This can be changed by passing a boolean value as a 3rd argument to the addEventListener().
