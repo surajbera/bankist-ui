@@ -29,7 +29,11 @@
 - window.pageYOffset - Relative to the document
 - window.pageXOffset - Relative to the document
 - Getting the Viewport width and height: document.documentElement.clientWidth and document.documentElement.clientHeight
+- MDN events: https://developer.mozilla.org/en-US/docs/Web/Events
 
 ## Features Implemented
 - Modal Window
 - Cookie Policy Popup
+
+## Notes
+- One advantage of using addEventListener() is that you can add removeEventListener(). 
